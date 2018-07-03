@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>This Keyword</title>
+</head>
+<body>
+    <script>
+        function person() {
+            return (this.firstname + " " + this.lastname + " , " + this.age + " years old");
+        }
+
+        function myMother(firstname, lastname, age) {
+            this.firstname = firstname;
+            this.lastname = lastname;
+            this.age = age;
+        }
+
+        console.log(person.call(myMother("Vo Thi", "Chau", 60)));
+
+        var car = function (feul,maxSpeed) {
+            return("The car: " + this.name + " - Feul use: " + feul + " - Max speed: " + maxSpeed + " km/h.");
+        };
+
+        var audi = {
+            name: "Audi a8"
+        };
+
+        var toyota = {
+            name: "vios"
+        };
+
+        console.log(car.apply(audi,["gasoline",300]));
+        console.log(car.call(toyota,"gasoline",95));
+
+    </script>
+</body>
+</html>

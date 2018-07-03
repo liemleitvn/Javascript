@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array</title>
+    <style>
+        table {
+            background: antiquewhite;
+            width: 400px;
+            font-size: 15px;
+            font-family: Tahoma;
+        }
+        table th {
+            background: chartreuse;
+            color: red;
+            font-size: 22px;
+            align-content: center;
+        }
+        form{
+            background: antiquewhite;
+            width: 400px;
+            font-size: 15px;
+            font-family: Tahoma;
+        }
+    </style>
+    <script src="lib.js"></script>
+</head>
+<body>
+
+<form action="index.php" name="frmInfo" method="post" onsubmit="return checkInfor()">
+    <table>
+        <thead>
+        <tr>
+            <th colspan="3">Information</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Name: </td>
+            <td colspan="2"><input type="text" name="name" id="idName"></td>
+        </tr>
+        <tr>
+            <td>Birthday: </td>
+            <td colspan="2"><input type="text" name="birthday" id="idBirthday"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button type="submit" name="submit" id="idSubmit" onclick="event.preventDefault();ArrayPush()">
+                    Add
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">-----------Click the button to action------------</td>
+        </tr>
+        <tr>
+            <td><button onclick="event.preventDefault();Show()">Show</button></td>
+            <td><button onclick="event.preventDefault();SortBirthday()">Sort Birthday</button></td>
+            <td><button onclick="event.preventDefault();SortName()">Sort Name</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="event.preventDefault();event.preventDefault();ArrayPop()">Array Pop</button></td>
+            <td><button onclick="event.preventDefault();ArraySlice()">Array Slice</button></td>
+            <td><button onclick="event.preventDefault();jsonTest()">JSON*</button></td>
+        </tr>
+        </tbody>
+    </table>
+</form>
+<form>
+    <p id="id2"></p>
+    <p id = "id"></p>
+</form>
+</body>
+</html>

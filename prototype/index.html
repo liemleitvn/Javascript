@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prototype</title>
+</head>
+<body>
+<p id="id">Exercise</p>
+<script>
+    function Person(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.friend = [];
+        this.say = function () {
+            console.log("Say hello");
+        }
+    }
+
+    Person.prototype.AddFriend = function (friend) {
+        this.friend.push(friend)
+    };
+
+    Person.prototype.ShowName = function () {
+        console.log(this.firstName + " " + this.lastName);
+    };
+
+    function Student(id) {
+        this.id = id;
+    }
+
+    Student.prototype = new Person("Duong","Liem");
+    var st = new Student(1234);
+
+    st.ShowName();
+    st.say();
+    st.AddFriend({name: "Vuong Gia", age: 29});
+    st.AddFriend("Lo Tri Tham");
+    st.AddFriend({name: "Gia Toc", age: 33});
+    st.AddFriend([{class: "12a1", teacher: "Nguyen Khanh"},{class: "12a2", teacher: "Kim Huong"}]);
+    console.log(st.id);
+    console.log(st);
+
+
+
+</script>
+
+</body>
+</html>

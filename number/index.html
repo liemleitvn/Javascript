@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Number</title>
+</head>
+<body>
+    <h1>Number</h1>
+    <strong>var number = 12345.6789</strong>
+    <br>
+    <p><STRONG>number.toString(): </STRONG>Chuyen day so thanh chuoi</p>
+    <p id="id1"></p>
+    <br>
+    <p><strong>number.toFixed(n): </strong>Lam trong voi n so thap phan</p>
+    <p id="id2"></p>
+    <br>
+    <p><strong>number.toPrecision(n)</strong>Lam tron voi n so (tinh ca phan nguyen va phan thap phan)</p>
+    <p id="id3"></p>
+    <br>
+    <p><strong>number.valueOf(): </strong>Tra ve gia tri cua so number</p>
+    <p id="id4"></p>
+    <br>
+
+    <script>
+        var number = 12345.6789
+        document.getElementById("id1").innerText = "Chuyen so number thanh string: " + number.toString();
+        document.getElementById("id2").innerText = "Lam tron 2 chu so thap phan: " + number.toFixed(2);
+        document.getElementById("id3").innerText = "Lam tron number co 6 so: " + number.toPrecision(6);
+        document.getElementById("id4").innerText = "Tra ve gia tri cua so: " + number.valueOf();
+
+    </script>
+</body>
+</html>
